@@ -10,6 +10,7 @@ This is the repository for kitalulus internship test
 - Create ```.env``` file.
 - Copy ```.env.example``` file into the ```.env``` file.
 - Change the ```APP_PORT``` variable on ```.env``` file. If you don't change this, the default port will be ```3000```.
+- Start the development server using terminal by typing ```npm run watch```.
 
 # API Endpoints
 
