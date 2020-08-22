@@ -1,0 +1,29 @@
+{
+  "name": "kitalulus-test",
+  "version": "1.0.0",
+  "description": "Repository for kitalulus internship test",
+  "main": "index.js",
+  "scripts": {
+    "js:start": "npx webpack",
+    "js:watch": "npx webpack --watch",
+    "server:start": "node dist/app.js",
+    "server:watch": "npx nodemon --prefix src/index.js",
+    "watch": "concurrently \"npm run js:watch\" \"npm run server:watch\""
+  },
+  "keywords": [
+    "node",
+    "kitalulus",
+    "express"
+  ],
+  "author": "cantdocpp",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
