@@ -7,7 +7,7 @@
     "js:start": "npx webpack",
     "js:watch": "npx webpack --watch",
     "server:start": "node dist/app.js",
-    "server:watch": "npx nodemon --prefix src/index.js",
+    "server:watch": "npx nodemon dist/app.js",
     "watch": "concurrently \"npm run js:watch\" \"npm run server:watch\""
   },
   "keywords": [
@@ -20,9 +20,13 @@
   "dependencies": {
     "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
+    "axios": "^0.20.0",
     "babel-loader": "^8.1.0",
     "concurrently": "^5.3.0",
+    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^2.0.0",
     "express": "^4.17.1",
+    "regenerator-runtime": "^0.13.7",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }

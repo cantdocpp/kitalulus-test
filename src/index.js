@@ -1,12 +1,14 @@
-import express from 'express'
+import express from 'express';
 
-const app = express()
-const port = 3000
+// Import controllers
+import { getUsers, getUserByName } from './controllers/user.controller';
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+const app = express();
+const port = process.env.APP_PORT || 3000;
+
+app.get('/users', getUsers);
+app.get('/users/:name', getUserByName);
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Example app listening at http://localhost:${port}`);
 })
